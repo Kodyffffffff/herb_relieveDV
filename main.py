@@ -4,7 +4,7 @@ import plotly.express as px
 from PIL import Image
 df = pd.read_csv('test.csv')
 st.set_page_config(page_title="effervescent tablets Dashboard",  layout="wide")
-st.title(":bar_chart: Efficacy of effervescent tablets Dashboard")
+st.title(":bar_chart: กราฟแสดงประสิทธิภาพของเม็ดฟู่")
 st.sidebar.header("Herb_Relieve")
 st.sidebar.title("Please click Here:")
 with open('style.css') as f:
@@ -33,10 +33,20 @@ if st.sidebar.button('กราฟรสชาติของยา'):
 else:
     st.write('')
 
-st.sidebar.selectbox("ลำดับข้อคิดเห็นของผู้ทดสอบ", options=df["ที่"].unique())
-
+# choose = st.sidebar.multiselect("ลำดับข้อคิดเห็นของผู้ทดสอบ", options=df["ที่"].unique())
+# st.plotly_chart()
 
 st.subheader("เลือกกราฟก่อนดูข้อมูล(ซ้ายมือ)")
+# options = st.sidebar.multiselect(
+#     'เลือกผู้ทดสอบ ?',
+#     df["ที่"].unique() )
+# st.write(df['ข้อคิดเห็นผู้ทดสอบ'], options)
+if st.sidebar.multiselect('เลือกข้อคิดเห็นผู้ทดสอบ ?',df["ที่"].unique()):
+    # st.write(df['เพศ'].unique(),df['อายุ'].unique())
+    st.write(df['ข้อคิดเห็น'])
+else:
+    st.write('')
+    
 
 
 st.caption('Code')
@@ -79,7 +89,7 @@ else:
 st.sidebar.selectbox("ลำดับข้อคิดเห็นของผู้ทดสอบ", options=df["ที่"].unique())
 st.subheader("เลือกกราฟก่อนดูข้อมูล")
 '''
-st.code(code, language='python')
+# st.code(code, language='python')
 image = Image.open('cdDV.png')
 st.image(image, caption='repo code in github ,Scan here',width=500)
 hide_st_style = """
