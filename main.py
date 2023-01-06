@@ -49,7 +49,7 @@ else:
     
 
 
-st.caption('Code')
+# st.caption('Code')
 code = '''
 import pandas as pd  //import module ที่จะใช่
 import streamlit as st
@@ -91,7 +91,7 @@ st.subheader("เลือกกราฟก่อนดูข้อมูล")
 '''
 # st.code(code, language='python')
 # image = Image.open('cdDV.png')
-st.image(image, caption='repo code in github ,Scan here',width=500)
+# st.image(image, caption='repo code in github ,Scan here',width=500)
 hide_st_style = """
             <style>
             #MainMenu {visibility: hidden;}
