@@ -1,6 +1,7 @@
 import pandas as pd
 import streamlit as st
 import plotly.express as px
+from PIL import Image
 df = pd.read_csv('test.csv')
 st.set_page_config(page_title="effervescent tablets Dashboard",  layout="wide")
 st.title(":bar_chart: Efficacy of effervescent tablets Dashboard")
@@ -79,6 +80,8 @@ st.sidebar.selectbox("ลำดับข้อคิดเห็นของผ�
 st.subheader("เลือกกราฟก่อนดูข้อมูล")
 '''
 st.code(code, language='python')
+image = Image.open('cdDV.png')
+st.image(image, caption='repo code in github ,Scan here',width=500)
 hide_st_style = """
             <style>
             #MainMenu {visibility: hidden;}
