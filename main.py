@@ -90,7 +90,7 @@ st.sidebar.selectbox("ลำดับข้อคิดเห็นของผ�
 st.subheader("เลือกกราฟก่อนดูข้อมูล")
 '''
 # st.code(code, language='python')
-image = Image.open('cdDV.png')
+# image = Image.open('cdDV.png')
 st.image(image, caption='repo code in github ,Scan here',width=500)
 hide_st_style = """
             <style>
